@@ -1,0 +1,31 @@
+POST http://localhost:8080/products HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzA4OTcwODksInN1YiI6IjVjZjg2ZGI3LWFmMzItNGUwYy1iZTU3LWFjMTY2NDkzNjBhZiJ9.EFAXZcSssCz-fdMh8AcqzIu23EDhbKmzj1tKrv9A0t8
+
+{
+    "name": "Test Product",
+    "price": 3499.00
+}
+
+################################
+
+GET http://localhost:8080/products HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzA4OTkwNzMsInN1YiI6IjVjZjg2ZGI3LWFmMzItNGUwYy1iZTU3LWFjMTY2NDkzNjBhZiJ9.EQmQybPZ9nk6HBwNFFPiCBDnaaUtQAzlrXjK3ZpH-vI
+
+################################
+
+GET http://localhost:8080/products/a71a451e-ce97-4bc8-a976-92a7883b921c HTTP/1.1
+
+################################
+
+PUT http://localhost:8080/products/a71a451e-ce97-4bc8-a976-92a7883b921c HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Test Product Updated",
+    "price": 3999.00
+}
+
+################################################################
+
+DELETE http://localhost:8080/products/a71a451e-ce97-4bc8-a976-92a7883b921c HTTP/1.1
